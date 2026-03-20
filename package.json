@@ -1,0 +1,21 @@
+{
+  "name": "tulpea-yield-vault",
+  "version": "1.0.0",
+  "description": "TulpeaYieldVault — ERC-7540 async redemption vault with pluggable strategies",
+  "scripts": {
+    "compile": "hardhat compile --config hardhat.config.cjs",
+    "test": "hardhat test test/*.test.ts test/strategies/*.test.ts --config hardhat.config.cjs",
+    "test:gas": "REPORT_GAS=true hardhat test test/*.test.ts test/strategies/*.test.ts --config hardhat.config.cjs",
+    "deploy:local": "hardhat run scripts/deploy.ts --config hardhat.config.cjs",
+    "deploy:mainnet": "hardhat run scripts/deploy.ts --config hardhat.config.cjs --network megaethMainnet"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@openzeppelin/contracts": "5.4.0",
+    "@openzeppelin/contracts-upgradeable": "5.4.0",
+    "dotenv": "^16.4.0",
+    "hardhat": "^2.24.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
